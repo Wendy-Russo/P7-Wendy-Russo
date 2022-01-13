@@ -1,0 +1,35 @@
+:root {
+    --bg-grey : #E7E7E7;
+    --bg-blue : #3282F7;
+    --bg-green : #68D9A4;
+    --bg-coral : #ED6454;
+    --bg-darkred : #D04F4F;
+}
+.bg-grey{
+    background-color: var(--bg-grey);
+}
+.bg-blue{
+    background-color: var(--bg-blue);
+}
+.bg-green{
+    background-color: var(--bg-green);
+}
+.bg-darkred{
+    background-color: var(--bg-darkred);
+}
+.bg-coral{
+    background-color: var(--bg-coral);
+}
+.col-darkred{
+    color:var(--bg-darkred)
+}
+.col-white{
+    color: white;
+}
+.search-btn{
+    position: relative;
+    top: -3.6rem;
+}
+.recipe-card{
+    height: 364px;
+}
