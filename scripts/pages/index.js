@@ -1,6 +1,6 @@
 "use strict";
 const recipeGallery = document.querySelector(".recipe-gallery")
-let recipeToDisplay = [1,26,50,2]
+let recipeToDisplay = [1,2,3,4,5,6,7,8,9]
 
 for(let i = 0 ; i<50;i++){
     if(recipeToDisplay.includes(recipes[i].id)){

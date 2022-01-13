@@ -1,11 +1,9 @@
 function recipeFactory(data) {
     function getUserCardDOM() {
         const {name,time,ingredients,description} = data;
-
+        //CREATES A NEW ELEMENT FOR EACH INGREDIENT IN A BIG STRING
         let ingredientTxt = "";
-
         ingredients.forEach((element) => {
-
             ingredientTxt += `<p class="fs-6 m-0 lh-1 text-truncate"><b>${element.ingredient}</b>`;
             if(element.quantity){
                 ingredientTxt += ` ${element.quantity}`;
@@ -14,10 +12,10 @@ function recipeFactory(data) {
                 ingredientTxt += ` ${element.unit}`;
             }
             ingredientTxt += `</p>`;
-
         });
+        //CREATES A CARD FOR A SINGLE RECIPE, NEEDS TO BE LOOPED
         let article = `
-        <figure class="recipe-card col-lg-4">
+        <figure class="recipe-card col-md-6 col-xl-4 ">
             <div class="h-50 bg-secondary bg-opacity-50 rounded-top ">
             </div>
             <figcaption class="h-50  bg-grey px-3 rounded-3">
@@ -32,7 +30,7 @@ function recipeFactory(data) {
                     <div class="col-6 h-100 p-0 pe-2 d-flex flex-column justify-content-between">
                         ${ingredientTxt}
                     </div>
-                    <div class="col-6 h-100 p-0 ps-2 overflow-auto">
+                    <div class="col-6 h-100 p-0 ps-2 overflow-hidden">
                         <p class=" h-100 lh-1 tex">${description}</p>
                     </div>
                 </div>
