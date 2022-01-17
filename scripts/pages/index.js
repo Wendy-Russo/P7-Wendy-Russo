@@ -7,12 +7,11 @@ const ustensilsDropList = document.querySelector("#ustensilsDropList")
 //IDS OF RECIPES TO DISPAY (CURRENTLY MATCH RECIPES ARRAY INDEXES+1, THEY MIGHT STOP MATCHING IF YOU SORT THEM)
 //THIS IS THE ID OF THE RECIPE ITSELF NOT OF IT'S POSITION IN ITS ARRAY
 let recipeToDisplay = [1,2,3,4,5,6,7,8]
-
 /*for(let i = 0 ; i<50;i++){
 if(recipeToDisplay.includes(recipes[i].id)){ <<<< OPTIONAL LONGER LOOP VERSION (USE IF I DECIDE TO SORT THE RECIPES)
 HAPPENS FOR EVERY RECIPE THAT IS IN THE ARRAY*/
 recipeToDisplay.forEach(element => {
-    let recipe = recipes[element-1].
+    let recipe = recipes[element-1];
     //NEW FACTORY AND GALLERY ELEMENT FOR >>>EVERY RECIPE<<<
     const recipeFac = recipeFactory(recipe);
     const card = recipeFac.getUserCardDOM();
