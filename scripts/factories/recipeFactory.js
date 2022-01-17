@@ -39,5 +39,30 @@ function recipeFactory(data) {
         let dom = new DOMParser().parseFromString(article,"text/html");
         return(dom.body.firstChild);
     }
-    return {getUserCardDOM }
+    function getIngredientOptionDom() {
+        const {ingredient} = data;
+
+        let article = `
+        <a class="dropdown-item col-white" href="#">${ingredient}</a>`;
+
+        let dom = new DOMParser().parseFromString(article,"text/html");
+        return(dom.body.firstChild);
+    }
+    function getAppareilOptionDom() {
+        const {appliance} = data;
+
+        let article = `
+        <a class="dropdown-item col-white" href="#">${appliance}</a>`;
+
+        let dom = new DOMParser().parseFromString(article,"text/html");
+        return(dom.body.firstChild);
+    }
+    function getUstensilsOptionDom() {
+        let article = `
+        <a class="dropdown-item col-white" href="#">${data}</a>`;
+
+        let dom = new DOMParser().parseFromString(article,"text/html");
+        return(dom.body.firstChild);
+    }
+    return {getUserCardDOM, getIngredientOptionDom, getAppareilOptionDom, getUstensilsOptionDom}
 }

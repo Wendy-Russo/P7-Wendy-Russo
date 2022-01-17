@@ -34,3 +34,39 @@
     height: 364px;
 
 }
+#ingredientsMenuButton{
+    color: white;
+    background-color: var(--bg-blue);
+}
+#ingredientsMenuButton:focus{
+    background-color: var(--bg-blue);
+}
+#ingredientsMenuButton:hover{
+    background-color: var(--bg-blue);
+}
+
+#appareilMenuButton:focus{
+    background-color: var(--bg-green);
+}
+#appareilMenuButton:hover{
+    background-color: var(--bg-green);
+}
+#ustensilsMenuButton:focus{
+    background-color: var(--bg-coral);
+}
+#ustensilsMenuButton:hover{
+    background-color: var(--bg-coral);
+}
+
+.ingredientDropList{
+    width: 200px;
+}
+.ingredientDropList a{
+    max-width: 200px;
+}
+.appareilsDropList a{
+    max-width: 200px;
+}
+.ustensilsDropList a{
+    max-width: 200px;
+}
