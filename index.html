@@ -5,6 +5,7 @@
         <title>Les Petits Plats</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href="css/styles.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bd29380e3d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -30,9 +31,11 @@
             </div>
             <div class="container d-flex flex-wrap">
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle fs-5 px-4 py-4 bg-blue" type="button" id="ingredientsMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    ingredients
-                    </button>
+                    <label for="ingredientsMenuButton" class="sr-only">Ingrédients</label>
+                    <input id="ingredientsMenuButton" name="ingredients" class="btn btn-secondary dropdown-toggle fs-5 text-start px-4 py-4 bg-blue col-white" type="text"
+                        autocomplete="off" placeholder="ingredients" data-bs-toggle="dropdown" aria-expanded="false" data-form-type="other">
+                    </input>
+                    <em class="fa-solid fa-angle-down col-white"></em>
                     <div class="ingredientDropList dropdown-menu bg-blue" id="ingredientDropList" aria-labelledby="ingredientsMenuButton">
                         <div class="d-flex flex-wrap justify-content-between">
 
@@ -40,18 +43,22 @@
                     </div>
                 </div>
                 <div class="dropdown mx-4">
-                    <button class="btn btn-secondary dropdown-toggle fs-5 px-4 py-4 bg-green" type="button" id="appareilMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        Appareil
-                    </button>
+                    <label for="appareilMenuButton" class="sr-only">Appareils</label>
+                    <input id="appareilMenuButton" name="Appareils" class="btn btn-secondary dropdown-toggle fs-5 text-start px-4 py-4 bg-green col-white" type="text"
+                        autocomplete="off" placeholder="Appareils" data-bs-toggle="dropdown" aria-expanded="false" data-form-type="other">
+                    </input>
+                    <em class="fa-solid fa-angle-down col-white"></em>
                     <div class="appareilsDropList dropdown-menu bg-green" id="appareilDropList" aria-labelledby="appareilMenuButton">
                         <div class="d-flex flex-wrap justify-content-between">
                         </div>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle fs-5 px-4 py-4 bg-coral" type="button" id="ustensilsMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ustensiles
-                    </button>
+                    <label for="ustensilsMenuButton" class="sr-only">Ustensiles</label>
+                    <input id="ustensilsMenuButton" name="Ustensiles" class="btn btn-secondary dropdown-toggle fs-5 text-start px-4 py-4 bg-coral col-white" type="text"
+                        autocomplete="off" placeholder="Ustensiles" data-bs-toggle="dropdown" aria-expanded="false" data-form-type="other">
+                    </input>
+                    <em class="fa-solid fa-angle-down col-white"></em>
                     <div class="ustensilsDropList dropdown-menu bg-coral" id="ustensilsDropList" aria-labelledby="ustensilsMenuButton">
                         <div class="d-flex flex-wrap justify-content-between">
                         </div>

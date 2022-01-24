@@ -26,6 +26,9 @@
 .col-white{
     color: white;
 }
+.col-white::placeholder{
+    color: white;
+}
 .search-btn{
     position: relative;
     top: -3.6rem;
@@ -57,7 +60,6 @@
 #ustensilsMenuButton:hover{
     background-color: var(--bg-coral);
 }
-
 .ingredientDropList{
     width: 200px;
 }
@@ -69,4 +71,8 @@
 }
 .ustensilsDropList a{
     max-width: 200px;
+}
+.dropdown em{
+    position:relative;
+    right: 3rem;
 }
