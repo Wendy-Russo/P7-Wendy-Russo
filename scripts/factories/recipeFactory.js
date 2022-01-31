@@ -1,6 +1,6 @@
 function recipeFactory(data) {
     function getUserCardDOM() {
-        const {name,time,ingredients,description} = data;
+        const {name,time,ingredients,description, id} = data;
         //CREATES A NEW ELEMENT FOR EACH INGREDIENT IN A BIG STRING
         let ingredientTxt = "";
         ingredients.forEach((element) => {
@@ -40,26 +40,26 @@ function recipeFactory(data) {
         return(dom.body.firstChild);
     }
     function getIngredientOptionDom() {
-        const {ingredient} = data;
 
-        let article = `
-        <a class="dropdown-item col-white" href="#">${ingredient}</a>`;
+        let article = `<a class="dropdown-item col-white text-truncate" href="#">${data}</a>`;
 
         let dom = new DOMParser().parseFromString(article,"text/html");
+
         return(dom.body.firstChild);
+
     }
+
     function getAppareilOptionDom() {
-        const {appliance} = data;
 
         let article = `
-        <a class="dropdown-item col-white" href="#">${appliance}</a>`;
+        <a class="dropdown-item col-white text-truncate" href="#">${data}</a>`;
 
         let dom = new DOMParser().parseFromString(article,"text/html");
         return(dom.body.firstChild);
     }
     function getUstensilsOptionDom() {
         let article = `
-        <a class="dropdown-item col-white" href="#">${data}</a>`;
+        <a class="dropdown-item col-white text-truncate" href="#">${data}</a>`;
 
         let dom = new DOMParser().parseFromString(article,"text/html");
         return(dom.body.firstChild);
