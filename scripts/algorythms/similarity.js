@@ -4,11 +4,11 @@ function compareString(string1, string2){
     let arrayString2 = Array.from(string2.toLowerCase());
 
     for(let i = 0; i <= Math.min(string1.length,string2.length)-1; i++){
-        if(arrayString1[i] == arrayString2[i]){
+        if(arrayString1[i] === arrayString2[i]){
             sim += 1;
         }
 
-        else if(arrayString1[i] == arrayString2[i+1] || arrayString1[i+1] == arrayString2[i]){
+        else if(arrayString1[i] === arrayString2[i+1] || arrayString1[i+1] === arrayString2[i]){
             sim += 0.5;
         }
 

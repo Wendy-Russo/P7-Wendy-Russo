@@ -40,8 +40,9 @@ function recipeFactory(data) {
         return(dom.body.firstChild);
     }
     function getIngredientOptionDom() {
-
-        let article = `<a class="dropdown-item col-white text-truncate" href="#">${data}</a>`;
+        let ingredient = data
+        ingredient = ingredient.slice(2,ingredient.length)
+        let article = `<a class="dropdown-item col-white text-truncate" href="#">${ingredient}</a>`;
 
         let dom = new DOMParser().parseFromString(article,"text/html");
 
@@ -49,20 +50,6 @@ function recipeFactory(data) {
 
     }
 
-    function getAppareilOptionDom() {
 
-        let article = `
-        <a class="dropdown-item col-white text-truncate" href="#">${data}</a>`;
-
-        let dom = new DOMParser().parseFromString(article,"text/html");
-        return(dom.body.firstChild);
-    }
-    function getUstensilsOptionDom() {
-        let article = `
-        <a class="dropdown-item col-white text-truncate" href="#">${data}</a>`;
-
-        let dom = new DOMParser().parseFromString(article,"text/html");
-        return(dom.body.firstChild);
-    }
-    return {getUserCardDOM, getIngredientOptionDom, getAppareilOptionDom, getUstensilsOptionDom}
+    return {getUserCardDOM, getIngredientOptionDom}
 }
