@@ -1,21 +1,31 @@
-function compareString(string1, string2){
-    let sim = 0
-    let arrayString1 = Array.from(string1.toLowerCase());
-    let arrayString2 = Array.from(string2.toLowerCase());
+"use strict";
+
+function compareString( string1, string2){
+
+    let sim = 0;
 
     for(let i = 0; i <= Math.min(string1.length,string2.length)-1; i++){
-        if(arrayString1[i] === arrayString2[i]){
+
+        if(string1[i] === string2[i]){
             sim += 1;
         }
 
-        else if(arrayString1[i] === arrayString2[i+1] || arrayString1[i+1] === arrayString2[i]){
+        else if(string1[i] === string2[i+1] || string1[i+1] === string2[i]){
             sim += 0.5;
         }
 
     }
-    return Math.trunc(sim / Math.max(string1.length,string2.length)*100);
+    return Math.trunc((sim / ( Math.max(string1.length,string2.length ) ) ) * 100);
+}
+
+function isUnique(testArray,testString){
+    for (let arrayID = 0; arrayID < testArray.length; arrayID++) {
+        if(compareString(testString,testArray[arrayID]) > similarityTreshold){
+            return false;
+        }
+    }
+    return true;
 }
 
 
-console.log(compareString("Casserole.","Casserole")+" %")
-console.log(compareString("Casserole","Casserole.")+" %")
+console.log(compareString("lait de coco","lait de coco")+" %")
