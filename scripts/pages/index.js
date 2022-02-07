@@ -231,32 +231,33 @@ recipesInput.addEventListener("input", function(e){
     recipesFound = currentRecipes;
 })
 
-ingredientsDropdown.addEventListener("click",function(e){
+ingredientsDropdown.addEventListener("click", function(e){
     addTag(e,ingredientsTags, ingredientsTagsDom ,"blue");
     searchFromAllSources();
 })
 
-appliancesDropdown.addEventListener("click",function(e){
+appliancesDropdown.addEventListener("click", function(e){
     addTag(e,appliancesTags, appliancesTagsDom ,"green");
     searchFromAllSources();
 })
 
-ustensilsDropdown.addEventListener("click",function(e){
+ustensilsDropdown.addEventListener("click", function(e){
     addTag(e,ustensilsTags, ustensilsTagsDom ,"coral");
     searchFromAllSources();
 })
 
-ingredientsTagsDom.addEventListener("click",function(e){
-    removeTag(e,ingredientsTagsDom,ingredientsTags,"blue");
+ingredientsTagsDom.addEventListener("click", function(e) {
+    removeTag(e,ingredientsTagsDom, ingredientsTags,"blue");
     searchFromAllSources();
 })
 
-appliancesTagsDom.addEventListener("click",function(e){
-    removeTag(e,appliancesTagsDom,appliancesTags,"green"),
+appliancesTagsDom.addEventListener("click", function(e){
+    removeTag(e,appliancesTagsDom, appliancesTags, "green");
     searchFromAllSources();
 })
 
-ustensilsTagsDom.addEventListener("click",function(e){
-    removeTag(e,ustensilsTagsDom,ustensilsTags,"coral"),
+ustensilsTagsDom.addEventListener("click", function(e){
+    removeTag(e,ustensilsTagsDom,ustensilsTags, "coral");
     searchFromAllSources();
 })
+console.log(ingredientsFound.every((element) => compareString("ananas", element) < similarityTreshold))

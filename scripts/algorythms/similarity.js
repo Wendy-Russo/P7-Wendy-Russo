@@ -1,5 +1,10 @@
 "use strict";
 
+/**
+ * @param {string} string1
+ * @param {string} string2
+ * @returns number
+ */
 function compareString( string1, string2){
 
     let sim = 0;
@@ -19,12 +24,14 @@ function compareString( string1, string2){
 }
 
 function isUnique(testArray,testString){
+    /*
     for (let arrayID = 0; arrayID < testArray.length; arrayID++) {
         if(compareString(testString,testArray[arrayID]) > similarityTreshold){
             return false;
         }
     }
     return true;
+    */
 }
 
 

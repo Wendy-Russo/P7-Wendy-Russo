@@ -6,8 +6,8 @@ function recipeFactory(data) {
         //CREATES A NEW ELEMENT FOR EACH INGREDIENT IN A BIG STRING
         let ingredientTxt = "";
         ingredients.forEach((element) => {
-            ingredientTxt += `<p class="fs-6 m-0 lh-1 text-truncate"><b>
-                ${element.ingredient}</b>`;
+
+            ingredientTxt += `<p class="fs-6 m-0 lh-1 text-truncate"><b>${element.ingredient}</b>`;
 
             if(element.quantity){
                 ingredientTxt += ` ${element.quantity}`;
@@ -81,8 +81,6 @@ function recipeFactory(data) {
 
 function removeChildren(DOM){
 
-    DOM.removeChildren
-
     while(DOM.firstElementChild){
         DOM.firstElementChild.remove();
     }
@@ -92,10 +90,9 @@ function refreshTags(tagsArray,dom,color){
 
     removeChildren(dom);
 
-    for (let tagsID = 0; tagsID < tagsArray.length; tagsID++) {
-        dom.appendChild( recipeFactory(tagsArray[tagsID]).getSelectedTagsDom(color) );
-    }
-
+    tagsArray.forEach(tag => {
+        dom.appendChild( recipeFactory(tag).getSelectedTagsDom(color) );
+    });
 }
 
 function refreshRecipes(){
