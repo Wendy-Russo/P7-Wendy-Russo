@@ -1,8 +1,8 @@
 "use strict";
 
 /**
- * @param {string} string1
- * @param {string} string2
+ * @param {String} string1
+ * @param {String} string2
  * @returns number
  */
 function compareString( string1, string2){
@@ -23,16 +23,7 @@ function compareString( string1, string2){
     return Math.trunc((sim / ( Math.max(string1.length,string2.length ) ) ) * 100);
 }
 
-function isUnique(testArray,testString){
-    /*
-    for (let arrayID = 0; arrayID < testArray.length; arrayID++) {
-        if(compareString(testString,testArray[arrayID]) > similarityTreshold){
-            return false;
-        }
-    }
-    return true;
-    */
-}
+
 
 
 console.log(compareString("lait de coco","lait de coco")+" %")
