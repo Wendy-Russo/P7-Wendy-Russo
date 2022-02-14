@@ -2,7 +2,7 @@
 
 function recipeFactory(data) {
     function getRecipeDom() {
-        const {name,time,ingredients,description} = data;
+        const {name,time,ingredients,description,id} = data;
         //CREATES A NEW ELEMENT FOR EACH INGREDIENT IN A BIG STRING
         let ingredientTxt = "";
         ingredients.forEach((element) => {
@@ -20,7 +20,7 @@ function recipeFactory(data) {
 
         //CREATES A CARD FOR A SINGLE RECIPE, NEEDS TO BE LOOPED
         let article = `
-        <figure class="recipe-card col-md-6 col-xl-4 ">
+        <figure class="recipeID${id} recipe-card col-md-6 col-xl-4 ">
             <div class="h-50 bg-secondary bg-opacity-50 rounded-top ">
             </div>
             <figcaption class="h-50  bg-grey px-3 rounded-3">

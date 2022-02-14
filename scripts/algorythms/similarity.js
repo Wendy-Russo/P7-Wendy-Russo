@@ -22,8 +22,3 @@ function compareString( string1, string2){
     }
     return Math.trunc((sim / ( Math.max(string1.length,string2.length ) ) ) * 100);
 }
-
-
-
-
-console.log(compareString("lait de coco","lait de coco")+" %")
