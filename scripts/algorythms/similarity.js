@@ -7,6 +7,10 @@
  */
 function compareString( string1, string2){
 
+    if(string1 === string2){
+        return 100;
+    }
+
     let sim = 0;
 
     for(let i = 0; i <= Math.min(string1.length,string2.length)-1; i++){

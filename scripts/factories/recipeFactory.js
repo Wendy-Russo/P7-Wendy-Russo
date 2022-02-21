@@ -9,18 +9,18 @@ function recipeFactory(data) {
 
             ingredientTxt += `<p class="fs-6 m-0 lh-1 text-truncate"><b>${element.ingredient}</b>`;
 
-            if(element.quantity){
-                ingredientTxt += ` ${element.quantity}`;
-            }
+            //if(element.quantity){
+            ingredientTxt += element.quantity;
+            //}
             if(element.unit){
-                ingredientTxt += ` ${element.unit}`;
+                ingredientTxt += element.unit;
             }
             ingredientTxt += "</p>";
         });
 
         //CREATES A CARD FOR A SINGLE RECIPE, NEEDS TO BE LOOPED
         let article = `
-        <figure class="recipeID${id} recipe-card col-md-6 col-xl-4 ">
+        <figure class="recipeID${id-1} recipe-card col-md-6 col-xl-4 ">
             <div class="h-50 bg-secondary bg-opacity-50 rounded-top ">
             </div>
             <figcaption class="h-50  bg-grey px-3 rounded-3">
@@ -44,8 +44,7 @@ function recipeFactory(data) {
                 </div>
             </figcaption>
         </figure>`;
-        let dom = new DOMParser().parseFromString(article,"text/html");
-        return(dom.body.firstChild);
+        return(new DOMParser().parseFromString(article,"text/html").body.firstChild);
     }
     function getDropdownOptionDom() {
 
@@ -53,9 +52,7 @@ function recipeFactory(data) {
         let article = `<a class="dropdown-item col-white text-truncate"
             href="#">${data}</a>`;
 
-        let dom = new DOMParser().parseFromString( article , "text/html" );
-
-        return(dom.body.firstChild);
+        return( new DOMParser().parseFromString( article , "text/html" ).body.firstChild);
 
     }
 
@@ -69,9 +66,8 @@ function recipeFactory(data) {
         </a>
         `;
 
-        let dom = new DOMParser().parseFromString( article , "text/html" );
 
-        return(dom.body.firstChild);
+        return( new DOMParser().parseFromString( article , "text/html" ).body.firstChild);
 
     }
 
