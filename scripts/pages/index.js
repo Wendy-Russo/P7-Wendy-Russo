@@ -267,9 +267,6 @@ const ALL_RECIPE_IDS = getDisplayedRecipesIDs()
 recipesInput.addEventListener("input", function (e) {
     if(e.target.value.length > 2){
 
-        let time = (new Date().getSeconds()+new Date().getMilliseconds())
-        //displayDefault()
-
         searchFromTags(ingredientsTagsDom, ingredientsSearchStrings, ALL_RECIPE_IDS);
         searchFromTags(appliancesTagsDom, appliancesSearchStrings, ALL_RECIPE_IDS);
 
@@ -283,8 +280,6 @@ recipesInput.addEventListener("input", function (e) {
         }
 
         mainSearch(recipesId);
-
-        console.log((new Date().getSeconds()+new Date().getMilliseconds()) - time)
     }
 
     if(! recipesGallery.firstElementChild && ! document.getElementById("error-message")){
