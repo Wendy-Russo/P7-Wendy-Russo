@@ -7,7 +7,7 @@ function recipeFactory(data) {
         let ingredientTxt = "";
         ingredients.forEach((element) => {
 
-            ingredientTxt += `<p class="fs-6 m-0 lh-1 text-truncate"><b>${element.ingredient}</b>`;
+            ingredientTxt += `<p class="fs-6 m-0 lh-1 text-truncate"><b>${element.ingredient} : </b>`;
 
             //if(element.quantity){
             ingredientTxt += element.quantity;
@@ -71,6 +71,13 @@ function recipeFactory(data) {
 
     }
 
+    function getErrorMessage(){
+        let article = `
+        <p id="error-message">Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>`;
 
-    return {getRecipeDom, getDropdownOptionDom, getSelectedTagsDom}
+
+        return( new DOMParser().parseFromString( article , "text/html" ).body.firstChild);
+    }
+
+    return {getRecipeDom, getDropdownOptionDom, getSelectedTagsDom, getErrorMessage}
 }
