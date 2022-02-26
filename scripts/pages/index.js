@@ -281,6 +281,10 @@ recipesInput.addEventListener("input", function (e) {
 
         mainSearch(recipesId);
     }
+    else{
+        removeAllDom();
+        displayDefault();
+    }
 
     if(! recipesGallery.firstElementChild && ! document.getElementById("error-message")){
         recipesGallery.parentElement.appendChild(recipeFactory().getErrorMessage());
